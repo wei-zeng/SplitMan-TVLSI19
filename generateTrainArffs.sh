@@ -13,9 +13,9 @@ do
 #        java -cp ./DataPreprocessing/src/ Main $i $j 1 ./data/ 0 0
 #    done
     # generate arff files for bounding box cases
-	# java -cp ./DataPreprocessing/src/ Main $i 8 1 ./data/ 1 0
-	# java -cp ./DataPreprocessing/src/ Main $i 6 0.3 ./data/ 1 0
-	# java -cp ./DataPreprocessing/src/ Main $i 4 0.1 ./data/ 1 0
+	java -cp ./DataPreprocessing/src/ Main $i 8 1 ./data/ 1 0
+	java -cp ./DataPreprocessing/src/ Main $i 6 0.3 ./data/ 1 0
+	java -cp ./DataPreprocessing/src/ Main $i 4 0.1 ./data/ 1 0
 	# generate arff files for cross-validation-based proximity attack
     java -cp ./DataPreprocessing/src/ MainCVPA $i 4 0.1 ./data/ 1 5 0
     java -cp ./DataPreprocessing/src/ MainCVPA $i 6 0.3 ./data/ 1 5 0
