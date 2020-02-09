@@ -7,7 +7,10 @@ do
     # 4. path to the folder that holds everything;
     # 5. if bounding box is enabled or not (for both positive and negative instances);
     # 6. if generate testing instances
-    # generate arff files for no bounding box cases
+	
+	############ First part: training sets for regular classification ########
+    ############ Choose one to uncomment: either without or with bounding box ########
+	# generate arff files for no bounding box cases
 #    for j in 4 6 8
 #    do
 #        java -cp ./DataPreprocessing/src/ Main $i $j 1 ./data/ 0 0
@@ -16,6 +19,8 @@ do
 	java -cp ./DataPreprocessing/src/ Main $i 8 1 ./data/ 1 0
 	java -cp ./DataPreprocessing/src/ Main $i 6 0.3 ./data/ 1 0
 	java -cp ./DataPreprocessing/src/ Main $i 4 0.1 ./data/ 1 0
+
+	############## Second part: training sets for Proximity Attack ##########
 	# generate arff files for cross-validation-based proximity attack
     java -cp ./DataPreprocessing/src/ MainCVPA $i 4 0.1 ./data/ 1 5 0
     java -cp ./DataPreprocessing/src/ MainCVPA $i 6 0.3 ./data/ 1 5 0
