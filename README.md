@@ -57,7 +57,7 @@ Although we could generate all the testing instances and feed into Weka to perfo
 The results of the classification are placed in `data/(BB_)PotentialListFiles` and `data/(BB_)MetaFiles` directory. The format of the potential list file is: for each vpin, it starts with that vpin’s ID, followed by all the potential matching vpins, and ends with an exclamation mark. This pattern repeats for all the vpins in the dataset. The format of files generated in `(BB_)MetaFiles` directories can be found in `README.md` inside these folders.
 
 To run this program, enter the following command in terminal:
-`java -cp 'GeneratePotentialList/weka.jar:GeneratePotentialList/src/' Main` + arguments
+`java -cp 'GeneratePotentialList/weka.jar:GeneratePotentialList/src/' MainSoftImp` + arguments
 This program takes 6 arguments, they are listed below:
 1.	benchmark index. Only 1, 5, 10, 12, 18 are valid.
 2.	split layer. Only 8, 6, 4 are valid.
