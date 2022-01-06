@@ -81,7 +81,7 @@ public class MainSoftImp {
 //        runClassification(randomForest, benchmarkIndex, splitLevel, pathPrefix, maxHammingDis, maxXDis, maxYDis, startTime, boundingBox, threshold);
 //        runClassification(j48, benchmarkIndex, splitLevel, pathPrefix, maxHammingDis, startTime, boundingBox);
 //        runClassification(cvr, benchmarkIndex, splitLevel, pathPrefix, maxHammingDis, startTime, boundingBox);
-        runClassification(classifier, benchmarkIndex, splitLevel, pathPrefix, maxHammingDis, maxXDis, maxYDis, startTime, boundingBox, threshold);
+        runClassification(classifier, benchmarkIndex, splitLevel, pathPrefix, maxHammingDis, maxXDis, maxYDis, startTime, boundingBox, threshold, writeLoc);
       //  runBackFit(benchmarkIndex, splitLevel, pathPrefix, maxHammingDis, maxXDis, maxYDis, startTime, boundingBox);
 		//runCV_PA(benchmarkIndex, splitLevel, pathPrefix, startTime, boundingBox);
     }
@@ -221,7 +221,8 @@ public class MainSoftImp {
 										 double maxYDis,
 										 long startTime,
                                          boolean boundingBox,
-										 double threshold){
+										 double threshold,
+					boolean writeLoC){
 		double eps = 0.5;
         
         String vpinDataPath = pathPrefix + "VpinData/";
@@ -273,7 +274,7 @@ public class MainSoftImp {
             // create a bufferedwriter to write the potential list file
             BufferedWriter listWriter = null;
 			if (writeLoC) {
-				listWrite = new BufferedWriter(new FileWriter(potentialListFileName));
+				listWriter = new BufferedWriter(new FileWriter(potentialListFileName));
 			}
             BufferedWriter metaWriter = new BufferedWriter(new FileWriter(metaFileName));
             BufferedWriter paWriter = new BufferedWriter(new FileWriter(paFileName));
