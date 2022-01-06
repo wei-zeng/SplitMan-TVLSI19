@@ -81,7 +81,7 @@ public class MainSoftImp {
 //        runClassification(randomForest, benchmarkIndex, splitLevel, pathPrefix, maxHammingDis, maxXDis, maxYDis, startTime, boundingBox, threshold);
 //        runClassification(j48, benchmarkIndex, splitLevel, pathPrefix, maxHammingDis, startTime, boundingBox);
 //        runClassification(cvr, benchmarkIndex, splitLevel, pathPrefix, maxHammingDis, startTime, boundingBox);
-        runClassification(classifier, benchmarkIndex, splitLevel, pathPrefix, maxHammingDis, maxXDis, maxYDis, startTime, boundingBox, threshold, writeLoc);
+        runClassification(classifier, benchmarkIndex, splitLevel, pathPrefix, maxHammingDis, maxXDis, maxYDis, startTime, boundingBox, threshold, writeLoC);
       //  runBackFit(benchmarkIndex, splitLevel, pathPrefix, maxHammingDis, maxXDis, maxYDis, startTime, boundingBox);
 		//runCV_PA(benchmarkIndex, splitLevel, pathPrefix, startTime, boundingBox);
     }
